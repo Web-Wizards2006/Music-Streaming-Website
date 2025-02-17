@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Streaming Website</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>Music Streaming</h1>
+    <input type="text" id="search-bar" placeholder="Search songs..." />
+  </header>
+
+  <div id="music-library">
+    <h2>Music Library</h2>
+    <div class="song-list">
+      <div class="song" data-src="Esspresso.mp3" data-album="Album 1" data-title="Song 1">
+        <img src="https://images.genius.com/f8d1d714034d97ace5e4884bb320a60e.1000x1000x1.png" alt="Album 1" />
+        <p>Song 1</p>
+      </div>
+      <div class="song" data-src="Sajni.mp3" data-album="Album 2" data-title="Song 2">
+        <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84a27b6a5504e2415688d69628" alt="Album 2" />
+        <p>Song 2</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="audio-player">
+    <h3 id="current-song-title">Select a song</h3>
+    <img id="current-album-img" src="https://images.genius.com/f8d1d714034d97ace5e4884bb320a60e.1000x1000x1.png" alt="Album" />
+    <audio id="audio" controls>
+      <source id="audio-source" src="" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <div id="controls">
+      <button id="play-pause-btn">Play</button>
+      <button id="skip-btn">Skip</button>
+      <input type="range" id="volume-control" min="0" max="1" step="0.01" value="1" />
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
